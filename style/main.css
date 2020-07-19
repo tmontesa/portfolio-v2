@@ -1,0 +1,66 @@
+body {
+    font-family: 'Cabin', sans-serif;
+    font-size: 18px;
+}
+
+/* ---------------------------------- */ 
+
+#page-container-container {
+    width: 100%;
+    text-align: center;
+}
+
+/* ---------------------------------- */ 
+
+#page-container {
+    display: inline-block;
+    max-width: 1200px;
+    text-align: left;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+/* ---------------------------------- */ 
+
+h1 {
+    background: #000;
+    color: #fff;
+    width: 100%;
+    padding: 8rem 0;
+    text-align: center;
+    margin-bottom: 6rem;
+}
+
+/* ---------------------------------- */ 
+
+h2 {
+    margin: 0 0 2rem 0;
+    padding: 0;
+    font-size: 4rem;
+}
+
+/* ---------------------------------- */ 
+
+h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.subtitle {
+    margin-top: 0.25rem;
+}
+
+/* ---------------------------------- */ 
+
+.section {
+    display: grid;
+    grid-gap: 3rem;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(2, auto);
+    margin-bottom: 8rem;
+}
+
+.content {
+    margin-top: 1rem;
+    text-align: justify;
+}
