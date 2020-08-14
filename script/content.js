@@ -203,19 +203,28 @@ var education = new Page("Education", [
 
 document.getElementById("link-contact").onclick = function() {
     contact.render();
-    links.style.display = "none"
+    if (window.innerWidth < 900) {
+        links.style.display = "none"
+    }
+    
 }
 document.getElementById("link-experience").onclick = function() {
     experience.render();
-    links.style.display = "none"
+    if (window.innerWidth < 900) {
+        links.style.display = "none"
+    }
 }
 document.getElementById("link-projects").onclick = function() {
     projects.render();
-    links.style.display = "none"
+    if (window.innerWidth < 900) {
+        links.style.display = "none"
+    }
 }
 document.getElementById("link-education").onclick = function() {
     education.render();
-    links.style.display = "none"
+    if (window.innerWidth < 900) {
+        links.style.display = "none"
+    }
 }
 
 contact.render();
