@@ -30,11 +30,17 @@ Container
     margin-bottom: 24rem;
 }
 
-#menu {
+#menu-container {
     flex-basis: 25%;
-    position: sticky;
+    position: relative;
     padding-right: 6rem;
     box-sizing: border-box;
+    width: auto;
+}
+
+#menu {
+    position: fixed;
+    width: inherit;
 }
 
 #content-grid-container {
@@ -51,7 +57,7 @@ Container
 }
 
 .content-grid.stub {
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
 }
 
 .content-grid.small {
@@ -67,25 +73,49 @@ Text
 ==================================== */ 
 
 #menu-title {
-    font-size: 1.5rem;
+    
+    font-size: 2rem;
     line-height: 2rem;
     font-weight: 700;
 }
 
-#menu-links {
-    margin-top: 2rem;
+#hamburger {
+    text-align: right;
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 0;
+    padding: 1rem 0 1rem 1rem;
+    display: none;
+    cursor: pointer;
 }
 
-#menu-links > * {
+#menu-links {
+    padding-top: 2rem;
+}
+
+
+.menu-link  {
     font-size: 1rem;
+    line-height: 1rem;
     display: block;
-    text-decoration: none;
     margin-bottom: 1rem;
 }
 
+.menu-link a {
+
+    text-decoration: none;
+
+}
+
 #menu-links > *:hover {
-    color: #111;
-    background: #fff;
+
+}
+
+#asdf {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
 
 /* Page title */
@@ -140,6 +170,12 @@ h3 {
     //text-align: justify;
 }
 
+@media (min-width: 1250) {
+    #menu-links {
+        display: initial;
+    }
+}
+
 @media (max-width: 1250px) {
     
     #page-container {
@@ -152,11 +188,43 @@ h3 {
     .content-grid.small {
         grid-template-columns: initial;
     }
+
+    #menu {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        background: #fff;
+        width: 100%;
+        max-width: 800px;
+        box-sizing: border-box;
+    }
+
+
+    #menu-links {
+        padding-top: 2rem;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        display: none;
+    }
+
+    .menu-link {
+        display: inline-block;
+        margin: 0;
+    }
+
+    #content-grid-container {
+        padding-top: 8rem;
+    }
+
+    #hamburger {
+        display: initial;
+    }
 }
 
 @media (max-width: 900px) {
 
     #page-container {
+        width: 100%;
         max-width: 100%;
     }
 
@@ -167,5 +235,57 @@ h3 {
     .content-grid {
         padding: 2rem;
         box-sizing: border-box;
+    }
+
+    #content-grid-container {
+        padding-top: 5rem;
+    }
+
+    #menu-container {
+        width: 100%;
+    }
+
+    #menu {
+        max-width: 100%;
+        width: 100%;
+        padding: 1.5rem 2rem;
+        color: #fff;
+        background: #111;
+        
+    }
+
+    #menu-title {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+
+    #menu-links {
+        display: block;
+        padding-top: 6rem;
+        padding-bottom: 4rem;
+    }
+
+    .menu-link {
+        width: 100%;
+        font-size: 2rem;
+        line-height: 2rem;
+        text-align: center;
+        font-weight: 700;
+    }
+
+    .menu-link:not(:last-child) {
+        margin-bottom: 4rem;
+    }
+
+    .menu-link a {
+        color: #fff;
     }
 }
