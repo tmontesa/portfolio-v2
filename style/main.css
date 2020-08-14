@@ -1,3 +1,7 @@
+html {
+    overflow-y: scroll;
+  }
+
 body {
     font-family: 'Lexend Deca', sans-serif;
     font-size: 16px;
@@ -14,6 +18,19 @@ p {
     font-weight: 400;
     display: inline;
 }
+
+::-webkit-scrollbar {
+    width: 1rem;               /* width of the entire scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: color: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #eee;
+}
+
 
 /* ====================================  
 Container

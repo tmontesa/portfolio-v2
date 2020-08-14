@@ -1,4 +1,13 @@
-var contact = new Page();
+var contact = new Page("Experience", [
+
+    new Section(SECTION_TYPE.default, "Idk man", [
+        new Content(
+            "asdadfwertwrt",
+            "vbnvhrty35",
+            "nbfgjrfgjhetye"
+        ),
+    ]),
+]);
 
 var experience = new Page("Experience", [
 
@@ -40,7 +49,16 @@ var experience = new Page("Experience", [
 
 ]);
 
-var projects = new Page();
+var projects = new Page("Projects", [
+
+    new Section(SECTION_TYPE.default, "WIP", [
+        new Content(
+            "asdasfdafagd",
+            "vcbcbcvbcbvcb",
+            "assadafgdgasf"
+        ),
+    ]),
+]);
 
 var education = new Page("Education", [
 
