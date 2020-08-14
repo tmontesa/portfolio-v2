@@ -24,14 +24,25 @@ p {
 }
 
 ::-webkit-scrollbar-track {
-    background: color: #fff;
+    background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
     background: #eee;
 }
 
+a {
+    color: #999;
+    border-bottom: 0 solid transparent;
+    padding-bottom: 0.15rem;
+    transition: color 0.3s, border-bottom 0.3s;
+}
 
+a:hover {
+    color: #444;
+    border-bottom: 0.15rem solid #ddd;
+    transition: color 0.1s, border-bottom 0.2s;
+}
 /* ====================================  
 Container
 ==================================== */ 
@@ -90,7 +101,7 @@ Text
 ==================================== */ 
 
 #menu-title {
-    
+    padding-right: 4rem;
     font-size: 2rem;
     line-height: 2rem;
     font-weight: 700;
@@ -111,7 +122,7 @@ Text
 }
 
 
-.menu-link  {
+.menu-link {
     font-size: 1rem;
     line-height: 1rem;
     display: block;
@@ -252,6 +263,7 @@ h3 {
     .content-grid {
         padding: 2rem;
         box-sizing: border-box;
+        margin-bottom: 2rem;
     }
 
     #section-container {
@@ -272,16 +284,17 @@ h3 {
     }
 
     #menu-title {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 
     h2 {
         font-size: 1rem;
     }
 
-    h3 {
-        font-size: 1.2rem;
-        line-height: 1.5rem;
+    h3,
+    .content-grid.small h3 {
+        font-size: 1rem;
+        line-height: 1.2rem;
     }
 
     #menu-links {
