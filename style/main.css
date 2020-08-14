@@ -43,7 +43,7 @@ Container
     width: inherit;
 }
 
-#content-grid-container {
+#section-container {
     text-align: left;
     flex-basis: 75%;
     box-sizing: border-box;
@@ -212,7 +212,7 @@ h3 {
         margin: 0;
     }
 
-    #content-grid-container {
+    #section-container {
         padding-top: 8rem;
     }
 
@@ -237,7 +237,7 @@ h3 {
         box-sizing: border-box;
     }
 
-    #content-grid-container {
+    #section-container {
         padding-top: 5rem;
     }
 
