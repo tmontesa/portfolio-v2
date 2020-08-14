@@ -1,4 +1,4 @@
-var content = new Page();
+var contact = new Page();
 
 var experience = new Page("Experience", [
 
@@ -20,20 +20,20 @@ var experience = new Page("Experience", [
         ),
     ]),
 
-    new Section(SECTION_TYPE.default, "Industry Experience", [
+    new Section(SECTION_TYPE.default, "Other Experience", [
         new Content(
-            "Junior Developer: Maintenance for Costco Canada & US, Staples US, Sam's Club US, Internal Libraries & Services",
-            "PNI Digital Media, Jan 2020 - Apr 2020",
+            "Customer Service Representative",
+            "Dollarama North Vancouver, Aug - Dec 2020",
             "Software succeeds when it is well-matched to its intended purpose. Requirements engineering is the process of discovering that purpose by making requirements explicit and documenting them in a form amenable to analysis, reasoning, and validation, establishing the key attributes of a system prior to its construction. Students will learn methodical approaches to requirements analysis and design specification in early systems development phases, along with best practices and common principles to cope with notoriously changing requirements."
         ),
         new Content(
-            "Junior Developer Co-op: Status Report Web Application",
-            "PNI Digital Media, May 2017 - Dec 2017",
+            "Customer Service Representative, Cook",
+            "Pizza Hut North Vancouver, Jul 2016 - May 2017",
             "Software succeeds when it is well-matched to its intended purpose. Requirements engineering is the process of discovering that purpose by making requirements explicit and documenting them in a form amenable to analysis, reasoning, and validation, establishing the key attributes of a system prior to its construction. Students will learn methodical approaches to requirements analysis and design specification in early systems development phases, along with best practices and common principles to cope with notoriously changing requirements."
         ),
         new Content(
-            "Junior Quality Assurance Analyst Co-op: Fed-Ex US, Costco Canada & US, Internal Service",
-            "PNI Digital Media, May 2017 - Dec 2017",
+            "Seasonal Parking Attendant",
+            "Pacific National Exhibition, Jul 2014 - Aug 2014",
             "Software succeeds when it is well-matched to its intended purpose. Requirements engineering is the process of discovering that purpose by making requirements explicit and documenting them in a form amenable to analysis, reasoning, and validation, establishing the key attributes of a system prior to its construction. Students will learn methodical approaches to requirements analysis and design specification in early systems development phases, along with best practices and common principles to cope with notoriously changing requirements."
         ),
     ]),
@@ -195,3 +195,5 @@ document.getElementById("link-projects").onclick = function() {
 document.getElementById("link-education").onclick = function() {
     education.render();
 }
+
+contact.render();
