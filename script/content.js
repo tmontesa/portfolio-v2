@@ -1,10 +1,10 @@
 var contact = new Page("Experience", [
 
-    new Section(SECTION_TYPE.default, "Idk man", [
+    new Section(SECTION_TYPE.default, null, [
         new Content(
-            "asdadfwertwrt",
-            "vbnvhrty35",
-            "nbfgjrfgjhetye"
+            "Contact",
+            null,
+            "me@tmontesa.com"
         ),
     ]),
 ]);
@@ -32,7 +32,7 @@ var experience = new Page("Experience", [
     new Section(SECTION_TYPE.default, "Other Experience", [
         new Content(
             "Customer Service Representative",
-            "Dollarama North Vancouver, Aug - Dec 2020",
+            "Dollarama North Vancouver, Aug 2020 - Dec 2020",
             "Software succeeds when it is well-matched to its intended purpose. Requirements engineering is the process of discovering that purpose by making requirements explicit and documenting them in a form amenable to analysis, reasoning, and validation, establishing the key attributes of a system prior to its construction. Students will learn methodical approaches to requirements analysis and design specification in early systems development phases, along with best practices and common principles to cope with notoriously changing requirements."
         ),
         new Content(
@@ -203,15 +203,19 @@ var education = new Page("Education", [
 
 document.getElementById("link-contact").onclick = function() {
     contact.render();
+    links.style.display = "none"
 }
 document.getElementById("link-experience").onclick = function() {
     experience.render();
+    links.style.display = "none"
 }
 document.getElementById("link-projects").onclick = function() {
     projects.render();
+    links.style.display = "none"
 }
 document.getElementById("link-education").onclick = function() {
     education.render();
+    links.style.display = "none"
 }
 
 contact.render();
