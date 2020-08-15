@@ -6,6 +6,13 @@ const SECTION_TYPE  = {
     stub: "stub"
 }
 
+class Link {
+    constructor(name = "", href = "") {
+        this.name = name;
+        this.href = href;
+    }
+}
+
 class Content {
     constructor(title = "", subtitle = "", text = "") {
         this.title = title;
@@ -28,12 +35,57 @@ class Content {
     }
 }
 
+
+class ShowcaseContent {
+    constructor(title = "", subtitle = "", text = "", tags = [], link = null) {
+        this.title = title;
+        this.subtitle = subtitle;
+        this.text = text;
+        this.tags = tags;
+        this.link = link;
+        this.html = this.generate()
+    }
+
+    
+    generate() {
+        var title = this.title != null ? `<h3>${this.title.replace("\n", "<br />")}</h3>` : ``;
+        var subtitle = this.subtitle != null ? `<div class="subtitle">${this.subtitle.replace("\n", "<br />")}</div>` : ``;
+        var text = this.text != null ? `<p class="text">${this.text.replace("\n", "<br />")}</p>` : ``;
+
+        var tags = "";
+
+        if (this.tags != []) {
+            tags += `<div class="tags">`;
+            for (var tag of this.tags) {
+                tags += `<div class="tag">` + tag + `</div>`;
+            }
+            tags += `</div>`;
+        }
+
+        
+
+        var link = (this.link != null) ? `<div class="link"><a href="${this.link.href}">${this.link.name}</a></div>` : "";
+
+        return `
+            <div class="content">
+                ${title}
+                ${subtitle}
+                ${tags}
+
+                ${text}
+                ${link}
+            </div>
+        `;
+    }
+}
+
+
 class Section {
     constructor(type = SECTION_TYPE.default, title = "", contents = []) {
         this.title = title;
         this.contents = contents;
         this.type = type;
-        this.html = this.generate();
+        this.html = this.generate()
     }
 
     generate() {

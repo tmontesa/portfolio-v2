@@ -105,6 +105,7 @@ Text
     font-size: 2rem;
     line-height: 2rem;
     font-weight: 700;
+    letter-spacing: 0.1rem;
 }
 
 #hamburger {
@@ -191,12 +192,39 @@ h3 {
 .content .subtitle {
     margin-top: 0.25rem;
     color: #999;
+    display: inline-block;
+    max-height: 1rem;
 }
 
 .content .text {
     margin-top: 1rem;
     //text-align: justify;
 }
+
+.tags {
+    display: inline-block;
+    max-height: 1rem;
+    
+}
+
+.tags .tag {
+    display: inline-block;
+    max-height: 1rem;
+    line-height: 0;
+    padding: 0.666rem 0.8rem;
+    margin-left: 0.5rem;
+    color: #fff;
+    background: #ccc;
+    border-radius: 20px;
+}
+
+.link {
+    margin-top: 1rem;
+}
+
+.link a {
+    text-decoration: none;
+} 
 
 @media (min-width: 1250) {
     #menu-links {
@@ -226,13 +254,17 @@ h3 {
         box-sizing: border-box;
     }
 
+    #menu-title {
+        flex-basis: 100%;
+        text-align: center;
+    }
 
     #menu-links {
         padding-top: 2rem;
         width: 100%;
         flex-direction: row;
         justify-content: space-between;
-        display: none;
+        display: inline-flex;
     }
 
     .menu-link {
@@ -241,12 +273,9 @@ h3 {
     }
 
     #section-container {
-        padding-top: 8rem;
+        padding-top: 10rem;
     }
 
-    #hamburger {
-        display: initial;
-    }
 }
 
 @media (max-width: 900px) {
@@ -274,6 +303,10 @@ h3 {
         width: 100%;
     }
 
+    #hamburger {
+        display: initial;
+    }
+
     #menu {
         max-width: 100%;
         width: 100%;
@@ -285,6 +318,10 @@ h3 {
 
     #menu-title {
         font-size: 1rem;
+        flex-basis: 90%;
+        text-align: left;
+        padding-right: 0;
+        line-height: 1rem;
     }
 
     h2 {
@@ -294,7 +331,7 @@ h3 {
     h3,
     .content-grid.small h3 {
         font-size: 1rem;
-        line-height: 1.2rem;
+        line-height: 1.5rem;
     }
 
     #menu-links {
@@ -317,5 +354,24 @@ h3 {
 
     .menu-link a {
         color: #fff;
+    }
+
+    .subtitle {
+        width: 100%;
+    }
+
+    .tags {
+        margin-top: 0.5rem;
+    }
+
+    .tag:first-child {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 300px) {
+  
+    #section-container {
+        padding-top: 5rem;
     }
 }

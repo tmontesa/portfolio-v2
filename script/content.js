@@ -49,16 +49,149 @@ var experience = new Page("Experience", [
 
 ]);
 
+
+
+
+
+
+
+
+
+
+
 var projects = new Page("Projects", [
 
-    new Section(SECTION_TYPE.default, "WIP", [
-        new Content(
-            "asdasfdafagd",
-            "vcbcbcvbcbvcb",
-            "assadafgdgasf"
+    new Section(SECTION_TYPE.default, "Games", [
+        new ShowcaseContent(
+            "\"Neapolitan\": A 2D Dungeon Crawler / Restaurant Management Game ",
+            "Jul 2020 - Ongoing",
+            "Software succeeds when it is well-matched to its intended purpose. Requirements engineering is the process of discovering that purpose by making requirements explicit and documenting them in a form amenable to analysis, reasoning, and validation, establishing the key attributes of a system prior to its construction. Students will learn methodical approaches to requirements analysis and design specification in early systems development phases, along with best practices and common principles to cope with notoriously changing requirements.",
+            ["Godot", "GDScript", "Shaders", "Cross-Platform"],
+            new Link("View on Github", "https://github.com/tmontesa/in3-codec")
+        ),
+        new ShowcaseContent(
+            "Shogi (Japanese Chess) with AI & Network Play",
+            "Oct 2016 - Dec 2016",
+            "Software succeeds when it is well-matched to its intended purpose. Requirements engineering is the process of discovering that purpose by making requirements explicit and documenting them in a form amenable to analysis, reasoning, and validation, establishing the key attributes of a system prior to its construction. Students will learn methodical approaches to requirements analysis and design specification in early systems development phases, along with best practices and common principles to cope with notoriously changing requirements.",
+            ["Julia", "Tk"],
+            new Link("View on Github", "https://github.com/tmontesa/in3-codec")
+        ),
+    ]),
+
+    new Section(SECTION_TYPE.default, "Interactive", [
+        new ShowcaseContent(
+            "Interactive Scene WebGL Demo",
+            "Aug 2019",
+            "Software succeeds when it is well-matched to its intended purpose. Requirements engineering is the process of discovering that purpose by making requirements explicit and documenting them in a form amenable to analysis, reasoning, and validation, establishing the key attributes of a system prior to its construction. Students will learn methodical approaches to requirements analysis and design specification in early systems development phases, along with best practices and common principles to cope with notoriously changing requirements.",
+            ["Web", "JS", "WebGL", "Shaders", "Blender"],
+            new Link("View on Github", "https://tmontesa.github.io/webgl-scene/")
+        ),
+        new ShowcaseContent(
+            "Space Invaders WebGL Clone",
+            "Jun 2019",
+            "Software succeeds when it is well-matched to its intended purpose. Requirements engineering is the process of discovering that purpose by making requirements explicit and documenting them in a form amenable to analysis, reasoning, and validation, establishing the key attributes of a system prior to its construction. Students will learn methodical approaches to requirements analysis and design specification in early systems development phases, along with best practices and common principles to cope with notoriously changing requirements.",
+            ["Web", "JS", "WebGL", "Shaders"],
+            new Link("View on Github", "https://tmontesa.github.io/webgl-invaders/")
+        ),
+        new ShowcaseContent(
+            "Pomodoro Productivty Timer",
+            "Mar 2019",
+            "Software succeeds when it is well-matched to its intended purpose. Requirements engineering is the process of discovering that purpose by making requirements explicit and documenting them in a form amenable to analysis, reasoning, and validation, establishing the key attributes of a system prior to its construction. Students will learn methodical approaches to requirements analysis and design specification in early systems development phases, along with best practices and common principles to cope with notoriously changing requirements.",
+            ["Web", "JS", "Canvas"],
+            new Link("View on Github", "https://github.com/tmontesa/in3-codec")
+        ),
+        new ShowcaseContent(
+            "\"Puppy Panic\" Minigame",
+            "Feb 2019",
+            "Software succeeds when it is well-matched to its intended purpose. Requirements engineering is the process of discovering that purpose by making requirements explicit and documenting them in a form amenable to analysis, reasoning, and validation, establishing the key attributes of a system prior to its construction. Students will learn methodical approaches to requirements analysis and design specification in early systems development phases, along with best practices and common principles to cope with notoriously changing requirements.",
+            ["Web", "JS", "Canvas"],
+            new Link("View on Github", "https://github.com/tmontesa/in3-codec")
+        ),
+
+        new ShowcaseContent(
+            "\"Flower Catcher\" Minigame",
+            "Feb 2018",
+            "Software succeeds when it is well-matched to its intended purpose. Requirements engineering is the process of discovering that purpose by making requirements explicit and documenting them in a form amenable to analysis, reasoning, and validation, establishing the key attributes of a system prior to its construction. Students will learn methodical approaches to requirements analysis and design specification in early systems development phases, along with best practices and common principles to cope with notoriously changing requirements.",
+            ["Web", "JS", "Canvas"],
+            new Link("View on Github", "https://github.com/tmontesa/in3-codec")
+        ),
+    ]),
+
+    new Section(SECTION_TYPE.default, "Multimedia", [
+        new ShowcaseContent(
+            "Codec for Lossless-Compressed Bitmap Image Format",
+            "May 2018 - Aug 2018",
+            "Software succeeds when it is well-matched to its intended purpose. Requirements engineering is the process of discovering that purpose by making requirements explicit and documenting them in a form amenable to analysis, reasoning, and validation, establishing the key attributes of a system prior to its construction. Students will learn methodical approaches to requirements analysis and design specification in early systems development phases, along with best practices and common principles to cope with notoriously changing requirements.",
+            ["C++", "Qt"],
+            new Link("View on Github", "https://github.com/tmontesa/in3-codec")
+        ),
+        new ShowcaseContent(
+            "WAV Waveform Rendering",
+            "May - Aug 2018",
+            "Software succeeds when it is well-matched to its intended purpose. Requirements engineering is the process of discovering that purpose by making requirements explicit and documenting them in a form amenable to analysis, reasoning, and validation, establishing the key attributes of a system prior to its construction. Students will learn methodical approaches to requirements analysis and design specification in early systems development phases, along with best practices and common principles to cope with notoriously changing requirements.",
+            ["C++", "Qt"],
+            new Link("View on Github", "https://github.com/tmontesa/in3-codec")
+        ),
+        new ShowcaseContent(
+            "BMP Bitmap Rendering & Manipulation",
+            "May 2018 - Aug 2018",
+            "Software succeeds when it is well-matched to its intended purpose. Requirements engineering is the process of discovering that purpose by making requirements explicit and documenting them in a form amenable to analysis, reasoning, and validation, establishing the key attributes of a system prior to its construction. Students will learn methodical approaches to requirements analysis and design specification in early systems development phases, along with best practices and common principles to cope with notoriously changing requirements.",
+            ["C++", "Qt"],
+            new Link("View on Github", "https://github.com/tmontesa/in3-codec")
+        ),
+        new ShowcaseContent(
+            "WAV Sample Compression Algorithms with LZW & Huffman Encoding - Concept",
+            "May 2018 - Aug 2018",
+            "Software succeeds when it is well-matched to its intended purpose. Requirements engineering is the process of discovering that purpose by making requirements explicit and documenting them in a form amenable to analysis, reasoning, and validation, establishing the key attributes of a system prior to its construction. Students will learn methodical approaches to requirements analysis and design specification in early systems development phases, along with best practices and common principles to cope with notoriously changing requirements.",
+            ["C++", "Qt"],
+            new Link("View on Github", "https://github.com/tmontesa/in3-codec")
+        ),
+    ]),
+
+    new Section(SECTION_TYPE.default, "Networking", [
+        new ShowcaseContent(
+            "Dual-Stack File Transfer Client & Server with Instances",
+            "May 2018 - Aug 2018",
+            "Software succeeds when it is well-matched to its intended purpose. Requirements engineering is the process of discovering that purpose by making requirements explicit and documenting them in a form amenable to analysis, reasoning, and validation, establishing the key attributes of a system prior to its construction. Students will learn methodical approaches to requirements analysis and design specification in early systems development phases, along with best practices and common principles to cope with notoriously changing requirements.",
+            ["C"],
+            new Link("View on Github", "https://github.com/tmontesa/in3-codec")
+        ),
+    ]),
+
+    new Section(SECTION_TYPE.default, "Systems", [
+        new ShowcaseContent(
+            "Basic C Shell with Program Execution & Piping",
+            "Jan 2017 - Apr 2017",
+            "Software succeeds when it is well-matched to its intended purpose. Requirements engineering is the process of discovering that purpose by making requirements explicit and documenting them in a form amenable to analysis, reasoning, and validation, establishing the key attributes of a system prior to its construction. Students will learn methodical approaches to requirements analysis and design specification in early systems development phases, along with best practices and common principles to cope with notoriously changing requirements.",
+            ["C"],
+            new Link("View on Github", "https://github.com/tmontesa/in3-codec")
+        ),
+    ]),
+
+    
+
+    new Section(SECTION_TYPE.default, "Emulation", [
+        new ShowcaseContent(
+            "KCPSM Microprocessor Emulation",
+            "Sep 2016 - Oct 2016",
+            "Software succeeds when it is well-matched to its intended purpose. Requirements engineering is the process of discovering that purpose by making requirements explicit and documenting them in a form amenable to analysis, reasoning, and validation, establishing the key attributes of a system prior to its construction. Students will learn methodical approaches to requirements analysis and design specification in early systems development phases, along with best practices and common principles to cope with notoriously changing requirements.",
+            ["Julia"],
+            new Link("View on Github", "https://github.com/tmontesa/in3-codec")
         ),
     ]),
 ]);
+
+
+
+
+
+
+
+
+
+
+
+
 
 var education = new Page("Education", [
 
@@ -171,7 +304,7 @@ var education = new Page("Education", [
         ),
     ]),
 
-    new Section(SECTION_TYPE.small, "Theoretical Computing", [
+    new Section(SECTION_TYPE.small, "Mathematics", [
         new Content(
             "MATH 232 - Applied Linear Algebra", 
             null,
