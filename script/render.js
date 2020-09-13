@@ -1,126 +1,87 @@
-var pageTarget = document.getElementById("section-container")
+function Join(items = []) {
+    var html = ``;
 
-const SECTION_TYPE  = {
-    default: "",
-    small: "small",
-    stub: "stub"
+    if (items != []) {
+        for (item of items) {
+            html += item;
+        }
+    }
+
+    return html;
 }
 
-class Link {
-    constructor(name = "", href = "") {
-        this.name = name;
-        this.href = href;
-    }
-}
+function List(items = []) {
+    var html = ``;
 
-class Content {
-    constructor(title = "", subtitle = "", text = "") {
-        this.title = title;
-        this.subtitle = subtitle;
-        this.text = text;
-        this.html = this.generate()
-    }
+    if (items != []) {
+        html += `<ul>`;
 
-    generate() {
-        var title = this.title != null ? `<h3>${this.title.replace("\n", "<br />")}</h3>` : ``;
-        var subtitle = this.subtitle != null ? `<div class="subtitle">${this.subtitle.replace("\n", "<br />")}</div>` : ``;
-        var text = this.text != null ? `<p class="text">${this.text.replace("\n", "<br />")}</p>` : ``;
-        return `
-            <div class="content">
-                ${title}
-                ${subtitle}
-                ${text}
-            </div>
-        `;
-    }
-}
-
-
-class ShowcaseContent {
-    constructor(title = "", subtitle = "", text = "", tags = [], link = null) {
-        this.title = title;
-        this.subtitle = subtitle;
-        this.text = text;
-        this.tags = tags;
-        this.link = link;
-        this.html = this.generate()
-    }
-
-    
-    generate() {
-        var title = this.title != null ? `<h3>${this.title.replace("\n", "<br />")}</h3>` : ``;
-        var subtitle = this.subtitle != null ? `<div class="subtitle">${this.subtitle.replace("\n", "<br />")}</div>` : ``;
-        var text = this.text != null ? `<p class="text">${this.text.replace("\n", "<br />")}</p>` : ``;
-
-        var tags = "";
-
-        if (this.tags != []) {
-            tags += `<div class="tags">`;
-            for (var tag of this.tags) {
-                tags += `<div class="tag">` + tag + `</div>`;
-            }
-            tags += `</div>`;
+        for (item of items) {
+            html += `<li>` + item + `</li>`;
         }
 
-        
-
-        var link = (this.link != null) ? `<div class="link"><a href="${this.link.href}">${this.link.name}</a></div>` : "";
-
-        return `
-            <div class="content">
-                ${title}
-                ${subtitle}
-                ${tags}
-
-                ${text}
-                ${link}
-            </div>
-        `;
+        html += `</ul>`;
     }
+
+    return html;
+}
+
+function Tags(s = ``) {
+    return `<div class="tags">
+        Tags: ${s}
+    </div>`
+}
+
+function Link(title = ``, url = ``) {
+    return `<a href="${url}">${title}</a>`
 }
 
 
-class Section {
-    constructor(type = SECTION_TYPE.default, title = "", contents = []) {
-        this.title = title;
-        this.contents = contents;
-        this.type = type;
-        this.html = this.generate()
-    }
+function Entry(title = "", subtitle = "", text = "") {
+    var titleHtml = (title == "") ? "" :
+        `<h3>${title}</h3>`;
 
-    generate() {
-        var content_html = "";
-        for (var content of this.contents) {
-            content_html += content.html
-        }
+    var subtitleHtml = (subtitle == "") ? "" :
+        `<div class="subtitle">${subtitle}</div>`;
 
-        var title = (this.title != null) ? `<h2>${this.title}</h2>` : "";
+    var textHtml = (text == "") ? "" :
+        `<p class="text">${text}</p>`;
 
-        return `
-            ${title}
-            <div class="content-grid ${this.type}">${content_html}</div>
-        `;
-    }
+    return `
+        <div class="content">
+            ${titleHtml}
+            ${subtitleHtml}
+            ${textHtml}
+        </div>
+    `;
 }
 
-class Page {
-    constructor(title = "", sections = []) {
-        this.title = title;
-        this.sections = sections;
-        this.html = this.generate();
-    }
-
-    generate() {
-        var section_html = "";
-        for (var section of this.sections) {
-            section_html += section.html
-        }
-        return section_html;
-    }
-
-    render() {
-        pageTarget.innerHTML = this.html;
-    }
-
+const SectionType = {
+    DEFAULT: "default",
+    SMALL: "small",
+    STUB: "stub",
 }
+
+function Section(title = "", entries = [], type = SectionType.DEFAULT) {
+    var titleHtml = (title == "") ? "" :
+        `<h2>${title}</h2>`;
+
+    var sectionHtml = Join(entries);
+
+    return `
+        ${titleHtml}
+        <div class="section ${type}">
+            ${sectionHtml}
+        </div>
+    `;
+}
+
+function Page(sections = []) {
+    var sectionHtml = Join(sections);
+
+    return `
+        ${sectionHtml}
+    `;
+}
+
 
