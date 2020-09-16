@@ -67,6 +67,10 @@ td {
     padding: 0.5rem 2rem 0.5rem 0;
 }
 
+td.breakable {
+    word-break: break-all;
+}
+
 /* ====================================  
 Container
 ==================================== */ 
@@ -237,7 +241,6 @@ h3 {
 
 .content .text {
     margin-top: 1rem;
-    //text-align: justify;
 }
 
 .content a.showcase-link {
@@ -312,6 +315,7 @@ h3 {
     #menu-title {
         flex-basis: 100%;
         text-align: center;
+        padding-right: 0;
     }
 
     #menu-links {
@@ -342,11 +346,11 @@ h3 {
 
     body {
         font-size: 14px;
+        
     }
 
     table {
         font-size: 14px;
-        overflow: scroll;
     }
 
     .section {
@@ -426,6 +430,22 @@ h3 {
 
     .tag:first-child {
         margin-left: 0;
+    }
+
+    td {
+        padding: 0.5rem 1rem 0.5rem 0;
+    }
+
+    .content a.showcase-link {
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+        margin: 0.75rem 0 0 0;
+        padding: 1rem;
+    }
+
+    ul {
+        padding-left: 1rem;
     }
 }
 

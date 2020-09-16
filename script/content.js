@@ -5,7 +5,7 @@ page.contact = Page([
         Entry(
             `About`,
             ``,
-            `I am Timothy James Montesa, a recent Computing Science student from SFU. I have front & back-end software development experience with clients such as Costco, Fedex, Staples, and Sam’s Club in the US and Canada with PNI Digital Media. Some of my experiences include maintenance of client websites, 3rd party API integration, and internal tools development. I also have Quality Assurance experience with web applications and internal tools.<br /><br />
+            `I am Timothy James Montesa, a recent Computing Science graduate from SFU. I have front & back-end software development experience with clients such as Costco, Fedex, Staples, and Sam’s Club in the US and Canada with PNI Digital Media. Some of my experiences include maintenance of client websites, 3rd party API integration, and internal tools development. I also have Quality Assurance experience with web applications and internal tools.<br /><br />
             
             I am currently looking for a software development job. If you would like to contact me, you may email me at:<br />
             me@tmontesa.com.`
@@ -17,19 +17,19 @@ page.contact = Page([
                 <table>
                     <tr>
                         <td><b>Email</b></td>
-                        <td>me@tmontesa.com</td>
+                        <td class="breakable">me@tmontesa.com</td>
                     </tr>
                     <tr>
                         <td><b>Website</b></td>
-                        <td>${Link(`https://www.tmontesa.com`)}</td>
+                        <td class="breakable">${Link(`https://www.tmontesa.com`)}</td>
                     </tr>
                     <tr>
                         <td><b>Github</b></td>
-                        <td>${Link(`https://github.com/tmontesa`)}</td>
+                        <td class="breakable">${Link(`https://github.com/tmontesa`)}</td>
                     </tr>
                     <tr>
                         <td><b>Linkedin</b></td>
-                        <td>${Link(`https://www.linkedin.com/in/tmontesa/`)}</td>
+                        <td class="breakable">${Link(`https://www.linkedin.com/in/tmontesa/`)}</td>
                     </tr>
                 </table>
             `
