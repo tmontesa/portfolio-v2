@@ -33,8 +33,15 @@ function Tags(s = ``) {
 }
 
 function Link(title = ``, url = ``) {
+    if (url == ``) url = title;
     return `<a href="${url}">${title}</a>`
 }
+
+function ShowcaseLink(title = ``, url = ``) {
+    if (url == ``) url = title;
+    return `<a class="showcase-link" href="${url}">${title}</a>`
+}
+
 
 
 function Entry(title = "", subtitle = "", text = "") {

@@ -63,6 +63,10 @@ a:hover {
     margin-right: .5rem;
 }
 
+td {
+    padding: 0.5rem 2rem 0.5rem 0;
+}
+
 /* ====================================  
 Container
 ==================================== */ 
@@ -114,6 +118,21 @@ Container
 
 .content {
     
+}
+
+footer {
+    display: block;
+    width: 100%;
+    
+}
+
+
+
+#footer {
+    text-align: center;
+    color: #999;
+    font-size: 0.75rem;
+    padding: 4rem 0;
 }
 
 /* ====================================  
@@ -221,7 +240,7 @@ h3 {
     //text-align: justify;
 }
 
-.content a {
+.content a.showcase-link {
     display: inline-block;
     text-decoration: none;
     background: #eee;
@@ -236,7 +255,7 @@ h3 {
     transition: background 0.25s, color 0.25s;
 }
 
-.content a:hover {
+.content a.showcase-link:hover {
     background: #444;
     color: #eee;
     border-bottom: none;
@@ -323,6 +342,11 @@ h3 {
 
     body {
         font-size: 14px;
+    }
+
+    table {
+        font-size: 14px;
+        overflow: scroll;
     }
 
     .section {

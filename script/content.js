@@ -1,6 +1,41 @@
 var page = {};
 
-page.contact = `(Contact)`;
+page.contact = Page([
+    Section(`Information`, [
+        Entry(
+            `About`,
+            ``,
+            `I am Timothy James Montesa, a recent Computing Science student from SFU. I have front & back-end software development experience with clients such as Costco, Fedex, Staples, and Sam’s Club in the US and Canada with PNI Digital Media. Some of my experiences include maintenance of client websites, 3rd party API integration, and internal tools development. I also have Quality Assurance experience with web applications and internal tools.<br /><br />
+            
+            I am currently looking for a software development job. If you would like to contact me, you may email me at:<br />
+            me@tmontesa.com.`
+        ),
+        Entry(
+            `Contact`,
+            ``,
+            `
+                <table>
+                    <tr>
+                        <td><b>Email</b></td>
+                        <td>me@tmontesa.com</td>
+                    </tr>
+                    <tr>
+                        <td><b>Website</b></td>
+                        <td>${Link(`https://www.tmontesa.com`)}</td>
+                    </tr>
+                    <tr>
+                        <td><b>Github</b></td>
+                        <td>${Link(`https://github.com/tmontesa`)}</td>
+                    </tr>
+                    <tr>
+                        <td><b>Linkedin</b></td>
+                        <td>${Link(`https://www.linkedin.com/in/tmontesa/`)}</td>
+                    </tr>
+                </table>
+            `
+        )
+    ])
+])
 
 page.experience = Page ([
     Section(`Industry Experience`, [
@@ -49,7 +84,7 @@ page.experience = Page ([
             List([
                 `Obtained customer order and delivery information, by communicating in-person or phone and operating a point-of-sale machine, in order to prepare staff for future orders and document customer order history`,
                 `Fulfilled and cooked customer food orders, by adapting to different workflows for unique orders and managed order priority, in order to provide food on time and minimize waiting time for each customer`,
-                `Performed inventory on site’s food products, by counting ***`
+                `Performed inventory on site’s food products, by counting food stock and disposing of expired goods, in order to keep all ingredients as new as possible and report any shortages in ingredients`
             ])
         ),
         Entry(
@@ -85,8 +120,8 @@ page.projects = Page([
             `Documented successes and flaws in the approach to develop in a limited timeframe, by analyzing needed or unnecessary time sinks, areas having or lacking organization, and sacrifices made through time or code reusability, in order to improve workflow and time-management for future projects with strict time budgets`
         ]) + 
         Tags(`Game, Interactive, Web, Godot 3, GDScript, Aesprite, GIMP2`) +
-        Link(`Link to Demo`, `https://tmontesa.itch.io/unconventional-swordfighting`) +
-        Link(`Link to Source Code`, `https://github.com/tmontesa/mizjam`)
+        ShowcaseLink(`Link to Demo`, `https://tmontesa.itch.io/unconventional-swordfighting`) +
+        ShowcaseLink(`Link to Source Code`, `https://github.com/tmontesa/mizjam`)
         ),
         Entry(
             `Shogi (Japanese Chess) with AI & Network Play (CMPT 276)`,
@@ -108,7 +143,7 @@ page.projects = Page([
                 `Improved file size required to store .in3 files, by implementing LZW dictionary compression and decompression during the conversion process, in order to store files more efficiently on disk.`
             ]) +
             Tags(`Interactive, Program, Media, Audio, Compression, C++, Qt GUI, Course Project`) +
-            Link(`Link to Source Code`, `https://github.com/tmontesa/in3-codec`)
+            ShowcaseLink(`Link to Source Code`, `https://github.com/tmontesa/in3-codec`)
         ),
         Entry(
             `BMP Bitmap Rendering & Manipulation (CMPT 365)`,
@@ -118,7 +153,7 @@ page.projects = Page([
                 `Implemented various image filters, including grayscale dithering and displaying singular color channels`
             ]) +
             Tags(`Interactive, Program, Media, Image, C++, Qt GUI, Course Project`) +
-            Link(`Link to Source Code`, `https://github.com/tmontesa/bmp-manipulation`)
+            ShowcaseLink(`Link to Source Code`, `https://github.com/tmontesa/bmp-manipulation`)
         ),
         Entry(
             `WAV Waveform Rendering (CMPT 365)`,
@@ -127,7 +162,7 @@ page.projects = Page([
                 `Developed a waveform rendering program for short .wav files, using C++ and the QT GUI library, in order to gain understanding of audio fundamentals, such as file architecture, sample rate, compression, etc.`
             ]) +
             Tags(`Interactive, Program, Media, Audio, C++, Qt GUI, Course Project`) +
-            Link(`Link to Source Code`, `https://github.com/tmontesa/wav-waveform`)
+            ShowcaseLink(`Link to Source Code`, `https://github.com/tmontesa/wav-waveform`)
         )
     ]),
     Section(`Interactive`, [
@@ -139,8 +174,8 @@ page.projects = Page([
                 `Optionally created simple 3D models, using Blender and Photoshop, in order to gain understanding of 3D modeling and UV mapping`
             ]) +
             Tags(`Interactive, Web, WebGL, OpenGL ES3, GLSL, Blender, GIMP2, Course Project`) +
-            Link(`Link to Demo`, `https://tmontesa.github.io/webgl-scene/`) +
-            Link(`Link to Source Code`, `https://github.com/tmontesa/webgl-scene`)
+            ShowcaseLink(`Link to Demo`, `https://tmontesa.github.io/webgl-scene/`) +
+            ShowcaseLink(`Link to Source Code`, `https://github.com/tmontesa/webgl-scene`)
         ),
         Entry(
             `Space Invaders WebGL Clone (CMPT 361)`,
@@ -149,8 +184,8 @@ page.projects = Page([
                 `Developed a simple space shooter interactive web game, using WebGL and GLSL, in order to gain understanding of WebGL fundamentals, such as GPU processing, transformation matrices, and shaders`
             ]) +
             Tags(`Game, Interactive, Web, WebGL, OpenGL ES3, GLSL, Course Project`) +
-            Link(`Link to Demo`, `https://tmontesa.github.io/webgl-invaders/`) +
-            Link(`Link to Source Code`, `https://github.com/tmontesa/webgl-invaders`)
+            ShowcaseLink(`Link to Demo`, `https://tmontesa.github.io/webgl-invaders/`) +
+            ShowcaseLink(`Link to Source Code`, `https://github.com/tmontesa/webgl-invaders`)
         ),
         Entry(
             `Pomodoro Productivity Timer`,
@@ -159,8 +194,8 @@ page.projects = Page([
                 `Developed a productivity timer based on the Pomodoro technique, using JS and CSS, for personal tracking of time spent on work, as well as decrease burnout rate`
             ]) +
             Tags(`Interactive, Web, Productivity, JS Canvas`) +
-            Link(`Link to Demo`, `https://tmontesa.github.io/pomodoro/`) +
-            Link(`Link to Source Code`, `https://github.com/tmontesa/pomodoro`)
+            ShowcaseLink(`Link to Demo`, `https://tmontesa.github.io/pomodoro/`) +
+            ShowcaseLink(`Link to Source Code`, `https://github.com/tmontesa/pomodoro`)
         ),
         Entry(
             `"Puppy Panic" Minigame`,
@@ -169,8 +204,8 @@ page.projects = Page([
                 `Developed a basic 2D arcade minigame with simple enemy physics, using JS for game logic and GIMP for creating assets, in order to gain more practice for game development, as well as the fundamentals of physics and collision detection`
             ]) +
             Tags(`Game, Interactive, Web, Productivity, JS Canvas`) +
-            Link(`Link to Demo`, `https://tmontesa.github.io/puppy-panic/`) +
-            Link(`Link to Source Code`, `https://github.com/tmontesa/puppy-panic`)
+            ShowcaseLink(`Link to Demo`, `https://tmontesa.github.io/puppy-panic/`) +
+            ShowcaseLink(`Link to Source Code`, `https://github.com/tmontesa/puppy-panic`)
         ),
         Entry(
             `"Flower Catcher" Minigame`,
@@ -178,8 +213,8 @@ page.projects = Page([
             List([
                 `Developed a basic flower catching minigame, using JS for game logic and GIMP for creating assets, to apply basic fundamentals of HTML5 game design, such as update/render loops, JS Canvas, input polling, and implementation of basic game mechanics`
             ]) +
-            Link(`Link to Demo`, `https://tmontesa.github.io/flower-catcher/`) +
-            Link(`Link to Source Code`, `https://github.com/tmontesa/flower-catcher`)
+            ShowcaseLink(`Link to Demo`, `https://tmontesa.github.io/flower-catcher/`) +
+            ShowcaseLink(`Link to Source Code`, `https://github.com/tmontesa/flower-catcher`)
         )
     ]),
     Section(`Networking`, [
@@ -199,7 +234,7 @@ page.projects = Page([
             `Basic C Shell with Program Execution & Piping (CMPT 300)`,
             `Jan - Apr 2017`,
             List([
-                `Developed a shell for all Linux distributions, using C, to create a proof-of-concept application that can manipulate programs and files with ***`,
+                `Developed a shell for all Linux distributions, using C, to create a proof-of-concept application that can manipulate programs and files with bash commands`,
                 `Implemented ability to use batch commands from any directory, as well as use internal commands to change directory, print working directory, and view history`,
                 `Added ability to chain multiple commands and programs by redirecting IO using a file descriptor piping system`
             ]) +
@@ -427,7 +462,7 @@ page.education = Page([
             List([
                 `Number systems and errors (floating-point precision, round-off error, etc.)`,
                 `Nonlinear equation problems, gaussian elimination, eigenvalue problems`,
-                `Interpolation, approximation, differentiation, initial value problems`
+                `Interpolation, approximation, differentiation, block value problems`
             ])
         )
     ], SectionType.SMALL)
@@ -440,32 +475,36 @@ document.getElementById("page-experience").innerHTML = page.experience;
 document.getElementById("page-projects").innerHTML = page.projects;
 document.getElementById("page-education").innerHTML = page.education;
 
-document.getElementById("page-contact").style.display = `initial`;
+document.getElementById("page-contact").style.display = `block`;
 document.getElementById("page-experience").style.display = `none`;
 document.getElementById("page-projects").style.display = `none`;
 document.getElementById("page-education").style.display = `none`;
 
 document.getElementById("link-contact").onclick = function() {
-    document.getElementById("page-contact").style.display = `initial`;
+    document.getElementById("page-contact").style.display = `block`;
     document.getElementById("page-experience").style.display = `none`;
     document.getElementById("page-projects").style.display = `none`;
     document.getElementById("page-education").style.display = `none`;
+    window.scrollTo(0,0)
 };
 document.getElementById("link-experience").onclick = function() {
     document.getElementById("page-contact").style.display = `none`;
-    document.getElementById("page-experience").style.display = `initial`;
+    document.getElementById("page-experience").style.display = `block`;
     document.getElementById("page-projects").style.display = `none`;
     document.getElementById("page-education").style.display = `none`;
+    window.scrollTo(0,0)
 };
 document.getElementById("link-projects").onclick = function() {
     document.getElementById("page-contact").style.display = `none`;
     document.getElementById("page-experience").style.display = `none`;
-    document.getElementById("page-projects").style.display = `initial`;
+    document.getElementById("page-projects").style.display = `block`;
     document.getElementById("page-education").style.display = `none`;
+    window.scrollTo(0,0)
 };
 document.getElementById("link-education").onclick = function() {
     document.getElementById("page-contact").style.display = `none`;
     document.getElementById("page-experience").style.display = `none`;
     document.getElementById("page-projects").style.display = `none`;
-    document.getElementById("page-education").style.display = `initial`;
+    document.getElementById("page-education").style.display = `block`;
+    window.scrollTo(0,0)
 };
