@@ -112,7 +112,7 @@ page.projects = Page([
            Tags(`Game, Interactive, Web, Godot 3, GDScript, GLSL, Photoshop CC, InDesign CC, Aesprite, GIMP2`)
        ),
        Entry(
-        `“Unconventional Swordfighting”: 48-Hour Game Jam Submissione`,
+        `“Unconventional Swordfighting”: 48-Hour Game Jam Submission`,
         `Aug 2020`,
         List([
             `Developed a in-browser action-arcade video game, using the Godot 3 IDE and GDScript, as a submission in a community-run “Game Jam”, a 48-hour contest based on creating interactable media using only the provided rudimentary 8-bit asset pack`,
