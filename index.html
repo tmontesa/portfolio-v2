@@ -1,7 +1,10 @@
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1" http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<!-- This website is really old, please ignore the code. Could definitely be better. -->
 
 <head>
-    <title>Site</title>
+    <title>Timothy James Montesa</title>
     <link rel="stylesheet" href="style/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
 </head>
@@ -35,24 +38,12 @@
 
         </div>
 
-        <div class="page" id="page-contact">
-            TODO: Add skills
-        </div>
-
-        <div class="page" id="page-experience">
-            TODO: Add skills
-        </div>
-
-        <div class="page" id="page-projects">
-            TODO: Add skills
-        </div>
-
-        <div class="page" id="page-education">
-            TODO: Add skills
-        </div>
+        <div class="page" id="page-contact"></div>
+        <div class="page" id="page-experience"></div>
+        <div class="page" id="page-projects"></div>
+        <div class="page" id="page-education"></div>
     
     </div>
-
 </body>
 
 <div id="content-storage" hidden></div>
@@ -60,3 +51,26 @@
 <script src="script/main.js"></script>
 <script src="script/render.js"></script>
 <script src="script/content.js"></script>
+<script>
+    
+var query = (window.location.search).replace("?", "");
+console.log(query);
+
+switch(query) {
+    case "info":
+        setPage("page-contact");
+        break;
+    case "experience":
+        setPage("page-experience");
+        break;
+    case "projects":
+        setPage("page-projects");
+        break;
+    case "education":
+        setPage("page-education");
+        break;
+    default:
+        setPage("page-contact");
+        break;
+}
+</script>

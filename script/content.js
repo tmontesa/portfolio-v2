@@ -5,7 +5,7 @@ page.contact = Page([
         Entry(
             `About`,
             ``,
-            `I am Timothy James Montesa, a recent Computing Science graduate from SFU. I have front & back-end software development experience with clients such as Costco, Fedex, Staples, and Sam’s Club in the US and Canada with PNI Digital Media. Some of my experiences include maintenance of client websites, 3rd party API integration, and internal tools development. I also have Quality Assurance experience with web applications and internal tools.<br /><br />
+            `I am Timothy James Montesa, a full-stack software developer working with clients such as Costco, Fedex, Staples, and Sam’s Club in the US and Canada with PNI Digital Media. Some of my experiences include password system revamps, controller configuration, React modules, 3rd party API integration, and internal tools development. I have automation experience with Selenium WebDriver & Gherkin. I also do freelance web design & development work with Node.js, React, and Strapi CMS.<br /><br />
             
             I am currently looking for a software development job. If you would like to contact me, you may email me at:<br />
             me@tmontesa.com.`
@@ -39,6 +39,26 @@ page.contact = Page([
 
 page.experience = Page ([
     Section(`Industry Experience`, [
+        Entry(
+            `Junior Software Development Engineer: Maintenance for Costco Canada & US, Staples US`,
+            `PNI Digital Media, Sep 2021 - Present`,
+            List([
+                `Developed full-stack web application features and hotfixes, using C#, .NET Framework, Visual Studio, and Azure DevOps, to maintain application quality and maintain CI/CD practices.`,
+                `Developed and refactored front-end pages and gift builders, using ADA-compliance guidelines, JS, HTML5, and Accessibility Evaluating tools, to further increase the usability of Costco US & Canada’s website for those with disabilities or low visibility.`,
+                `Revamped the Costco Photo Printing password system across US & Canada, using C#, .NET Framework, and Azure SSO, in order to implement front-end and back-end verification, with additional criteria to increase the security of user accounts.`,
+                `Implemented Omniture/Ensighten analytics systems for certain Staples Printing Service pages, using C#, RESTful APIs, and .NET framework, in order to widen the information gathered from userbase and accurately measure customer trends.`
+            ])
+        ),
+        Entry(
+            `Junior Software Development Engineer in Test + Automation: Maintenance for Costco Canada & US`,
+            `PNI Digital Media, Nov 2020 - Aug 2022`,
+            List([
+                `Developed automated test cases for Costco US & Canada, using Selenium WebDriver, Gherkin, Visual Studio, and ReSharper, in order to automate testing of the web application pages and maintain quality across builds and hotfixes.`,
+                `Scheduled automated regression tests, using Azure DevOps pipelines, in order to free QA resources during nightly releases and ensure all features of Costco’s printing site is functional during critical hours.`,
+                `Established team test plans, methodologies, and systems for each sprint, using Jira, Confluence, and various team-based organization applications, in order to streamline team workflow and notify others of work needing priority. These systems are still used by the team.`,
+                `Manually tested complex builder functions and non-automatable features of Costco’s printing site, using Testrail and Jira to keep track of progress, in order to ensure product quality and usability, as well as verify edge-case fixes.`
+            ])
+        ),
         Entry(
             `Junior Developer: Maintenance for Costco Canada & US, Staples US, Sam's Club US, Internal Libraries & Services`,
             `PNI Digital Media, Jan 2020 - Apr 2020 (Ended employment due to COVID-19 impact on work shortage)`,
@@ -100,10 +120,35 @@ page.experience = Page ([
 ]);
 
 page.projects = Page([
+    Section(`Web Development`, [
+        Entry(
+            `Freelance - Zara Real Estate Listing Site`,
+            `Mar - Jun 2022`,
+            List([
+                `Developed and designed a responsive Real Estate website, utilizing Node.js, React, React-DOM-Router, RESTful APIs, and CSS, for a client that requested a concise biographical website with listings of real estate they that are (or have been) on sale/rent`,
+                `Created an authenticated, modifiable real estate listing system, with Strapi CMS and its APIs, for the client to be able to add, remove, or edit any information with minimal effort, as well as decoupling data from the React application`,
+                `Configured server traffic routing, using Nginx with DigitalOcean scalable droplets, in order to serve the React application to connecting users for minimal cost to the client`,
+            ]) +
+            Tags(`Javascript, Node.js, React, JSX, Strapi CMS, CSS3, HTML5, Nginx, RESTful API`) +
+            ShowcaseLink(`Link to Demo`, `http://zara.tmontesa.com/`)
+        )
+    ]),
    Section(`Games`, [
+        Entry(
+            `Bun-Bun Battlefield: Pursuing Pixels Game Jam 2022`,
+            `May 2022`,
+            List([
+                `Developed a multi-platform web-based game, with 2 other team members, utilizing the Godot game engine and GDScript, in the span of 7 days (approx. 40 hours work in total)`,
+                `Programmed a grid-based tactics system, with a modular character system and enemy AI, to create an enjoyable gameplay loop that could be feasibly done within the small timeframe`,
+                `Communicated with team members to prioritize important features, as well as streamline the process in order to maximize development time and minimize waiting time for each team member`,
+            ]) + 
+            Tags(`Game, Interactive, Web, Godot 3, GDScript`) +
+            ShowcaseLink(`Link to Demo`, `https://midnightcrisis.itch.io/bun-bun-battlefield`) +
+            ShowcaseLink(`Link to Source Code`, `https://github.com/midnight-crisis/bunny-tactics`)
+        ),
        Entry(
-           `“Neapolitan”: A 2D Dungeon Crawler / Restaurant Management Game`,
-           `Jul 2020 - Ongoing`,
+           `2D Dungeon Crawler / Restaurant Management Game Prototype`,
+           `Jul 2020 - Sep 2020`,
            List([
                `Prototyped an interactive game, utilizing the Godot 3 IDE, GDScript, and various multimedia tools, to conceptualize and develop a unique experience incorporating elements from various genres`,
                `Designed a procedurally-generated clustered map generator, using an customizable iterative algorithm with GDScript, in order to create new experiences for every new playthrough and maintain replayability over time`,
@@ -481,30 +526,26 @@ document.getElementById("page-projects").style.display = `none`;
 document.getElementById("page-education").style.display = `none`;
 
 document.getElementById("link-contact").onclick = function() {
-    document.getElementById("page-contact").style.display = `block`;
-    document.getElementById("page-experience").style.display = `none`;
-    document.getElementById("page-projects").style.display = `none`;
-    document.getElementById("page-education").style.display = `none`;
-    window.scrollTo(0,0)
+    window.location.search = "info"
+    //setPage("page-contact");
 };
 document.getElementById("link-experience").onclick = function() {
-    document.getElementById("page-contact").style.display = `none`;
-    document.getElementById("page-experience").style.display = `block`;
-    document.getElementById("page-projects").style.display = `none`;
-    document.getElementById("page-education").style.display = `none`;
-    window.scrollTo(0,0)
+    window.location.search = "experience"
+    //setPage("page-experience");
 };
 document.getElementById("link-projects").onclick = function() {
-    document.getElementById("page-contact").style.display = `none`;
-    document.getElementById("page-experience").style.display = `none`;
-    document.getElementById("page-projects").style.display = `block`;
-    document.getElementById("page-education").style.display = `none`;
-    window.scrollTo(0,0)
+    window.location.search = "projects"
+    //setPage("page-projects");
 };
 document.getElementById("link-education").onclick = function() {
+    window.location.search = "education"
+    //setPage("page-education");
+};
+
+function setPage(idToShow) {
     document.getElementById("page-contact").style.display = `none`;
     document.getElementById("page-experience").style.display = `none`;
     document.getElementById("page-projects").style.display = `none`;
-    document.getElementById("page-education").style.display = `block`;
-    window.scrollTo(0,0)
-};
+    document.getElementById("page-education").style.display = `none`;
+    document.getElementById(idToShow).style.display = `block`;
+}
