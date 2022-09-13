@@ -130,7 +130,7 @@ page.projects = Page([
                 `Configured server traffic routing, using Nginx with DigitalOcean scalable droplets, in order to serve the React application to connecting users for minimal cost to the client`,
             ]) +
             Tags(`Javascript, Node.js, React, JSX, Strapi CMS, CSS3, HTML5, Nginx, RESTful API`) +
-            ShowcaseLink(`Link to Demo`, `http://zara.tmontesa.com/`)
+            ShowcaseLink(`Link to Demo`, `http://zara.tmontesa.site/`)
         )
     ]),
    Section(`Games`, [
